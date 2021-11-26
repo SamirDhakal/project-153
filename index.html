@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src = "https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+        <!--<script src = "rotation.js"></script>-->
+    </head>
+    <body>
+        <a-scene>
+            <a-a-assets>
+                <a-asset-item id = "island" src = "Project-153-assets-main\assets\island\scene.gltf"></a-asset-item>
+                <a-asset-item id = "fish" src = "Project-153-assets-main\assets\fish\scene.gltf"></a-asset-item>
+            <a-a-assets>
+
+            <a-sky geometry = "primitive:sphere"
+            material = "shader:gradient;bottomColor:#00009e;topColor:109 205 227; offset:0.0001;"
+            radius = "100"
+            side = "double"
+            animation = "proporty:rotation;to:0 300 0;easing:linear;loop:true;dur:500000">
+
+                <a-entity 
+                    gltf-model = "#island"
+                    scale = "1 1 1"
+                    position = "0 -15 -40"
+                >
+
+                </a-entity>
+            </a-sky>
+        </a-scene>
+    </body>
+</html>
